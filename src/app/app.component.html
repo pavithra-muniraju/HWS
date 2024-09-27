@@ -1,0 +1,3 @@
+<ds-hws-header style="position: fixed;width: 100%;"></ds-hws-header>
+<ds-themed-root class="rectangle1" [shouldShowFullscreenLoader]="(isAuthBlocking$ | async) || (isThemeLoading$ | async)"
+  [shouldShowRouteLoader]="isRouteLoading$ | async"></ds-themed-root>

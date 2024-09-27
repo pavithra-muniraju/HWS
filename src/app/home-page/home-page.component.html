@@ -1,0 +1,134 @@
+<!-- <ds-themed-home-news></ds-themed-home-news>
+<div class="container">
+  <ng-container *ngIf="(site$ | async) as site">
+    <ds-view-tracker [object]="site"></ds-view-tracker>
+  </ng-container>
+  <ds-themed-search-form [inPlaceSearch]="false" [searchPlaceholder]="'home.search-form.placeholder' | translate"></ds-themed-search-form>
+  <ds-themed-top-level-community-list></ds-themed-top-level-community-list>
+  <ds-recent-item-list *ngIf="recentSubmissionspageSize>0"></ds-recent-item-list>
+</div> -->
+
+<div class="container">
+
+  <div style="filter: none;">
+    <br>
+    <h1 class="hero">Hero Wisdom Sphere</h1>
+
+    <!-- Search Box -->
+
+    <input class="freetext_search_input" id="query" name="query" type="text"
+      placeholder="Type Keyword, Section, Unit or Project Code to search">
+
+    <div class="row" style="margin-top: 2rem;">
+      <div class="col-md-3"></div>
+      <div class="col-md-3">
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+            Create New
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" (click)="uploadtype('single')"  data-toggle="modal" data-target="#exampleModal">Single Upload</a>
+            <a class="dropdown-item" (click)="uploadtype('bulk')">Bulk Upload</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <button class="search-button"> Search</button>
+      </div>
+      <div class="col-md-3"></div>
+    </div>
+    <div>
+      <h4 style="text-align: left; color: white ;margin-top: 2rem;">
+        Explore Knowledge Areas
+      </h4>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card">
+            <h5 class="card-title">Design Guidelines</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Description</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <h5 class="card-title">Lessons Learnt</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Description</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <h5 class="card-title">Test Standards</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Description</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <h5 class="card-title">Knowledge Area 2 </h5>
+            <h6 class="card-subtitle mb-2 text-muted">Description</h6>
+            <p class="card-text">Some quick ex  ample text to build on the card title and make up the bulk of the card's
+              content.
+              <i class="fa-solid fa-clipboard-list"></i>
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Single Upload</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+     
+        <div class="bs-stepper">
+          <div class="bs-stepper-header" role="tablist">
+            <!-- your steps here -->
+            <div class="step" data-target="#logins-part">
+              <button type="button" class="step-trigger" role="tab" aria-controls="logins-part" id="logins-part-trigger">
+                <span class="bs-stepper-circle">1</span>
+                <span class="bs-stepper-label">Logins</span>
+              </button>
+            </div>
+            <div class="line"></div>
+            <div class="step" data-target="#information-part">
+              <button type="button" class="step-trigger" role="tab" aria-controls="information-part" id="information-part-trigger">
+                <span class="bs-stepper-circle">2</span>
+                <span class="bs-stepper-label">Various information</span>
+              </button>
+            </div>
+          </div>
+          <div class="bs-stepper-content">
+            <!-- your steps content here -->
+            <div id="logins-part" class="content" role="tabpanel" aria-labelledby="logins-part-trigger"></div>
+            <div id="information-part" class="content" role="tabpanel" aria-labelledby="information-part-trigger"></div>
+          </div>
+        </div>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn cancel" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn next">Next</button>
+      </div>
+    </div>
+  </div>
+</div>
